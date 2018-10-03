@@ -1,18 +1,19 @@
-/// <reference path="./Classes/Player.ts" />
-/// <reference path="./Classes/constructor.ts" />
+import {Player} from './Classes/Player';
+import {SubPlayer} from './Classes/Player';
+import {logger} from './Classes/utility';
+import * as Helper from './Classes/utility';
+//import * as $ from 'jquery';
 
 class Startup {
-    public static main(): number {     
-        
-        let game: Game = new Game('Nafly', 25);
-        console.log(game.name);
-        console.log(game.age);
+    public static main(): number {            
+       
 
         let firstPlayer: Player = new Player();
         firstPlayer.name = "Nafly Mohammed";       
 
-        console.log(firstPlayer.formatName());        
-        
+        Helper.logger(firstPlayer.formatName());       
+        logger(firstPlayer.formatName());
+
         let subPlayer: SubPlayer = new SubPlayer("Sample Data");
         return 0;
     }        

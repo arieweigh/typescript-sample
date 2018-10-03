@@ -2,7 +2,8 @@
     "extends": "../tsconfig.base.json",
     "compilerOptions": {
         "removeComments": true,
-        "outFile": "../out/main.js"
+        "module": "commonjs"
+        //"outFile": "../out/main.js"
     },
     "files": [
         "./main.ts"

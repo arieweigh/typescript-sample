@@ -1,29 +1,28 @@
-/// <reference path="../Interface/iPerson.ts" />
+import { IPerson } from '../Interface/iPerson'
 
-class Player implements IPerson
-{
+class Player implements IPerson {
     name: string = "Nafly";
     age?: number;
 
     //Constructor
-    constructor()    {
+    constructor() {
         console.log("New Player instanace created.")
     }
 
-    formatName(){
+    formatName() {
         return this.name.toUpperCase();
-    } 
+    }
 
     private result: string[] = [];
-    addResult(newResult: string): void{
+    addResult(newResult: string): void {
         this.result.push(newResult);
     }
 
-    updateScoreboard(): void{
+    updateScoreboard(): void {
         let output: string = '<h2>Scoreboard</h2>';
 
         //Lopp over all result
-        for(let index=0; index< this.result.length; index++){
+        for (let index = 0; index < this.result.length; index++) {
             let res: string = this.result[index];
             output += '<h4>';
             output += res;
@@ -32,12 +31,14 @@ class Player implements IPerson
     }
 }
 
-class SubPlayer extends Player{
+class SubPlayer extends Player {
     readonly favoriteEditor: string;
 
-    constructor(editor: string){        
+    constructor(editor: string) {
         super();
-        console.log("New SubPlayer instanace created.") 
+        console.log("New SubPlayer instanace created.")
         this.favoriteEditor = editor;
     }
 }
+
+export { Player, SubPlayer };
