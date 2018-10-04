@@ -6,16 +6,18 @@ var Book = (function () {
     }
     return Book;
 }());
+exports.Book = Book;
 function GetAllBooks() {
     var books = [
-        { title: "Fundamentals of Wavelets", author: "Goswami, Jaideva", publisher: "Wiley", category: Enum_1.Category.Biography, available: true },
-        { title: "Data Smart", author: "Foreman, John", publisher: "Wiley", category: Enum_1.Category.Biography, available: false },
-        { title: "God Created the Integers", author: "Hawking, Stephen", publisher: "Penguin", category: Enum_1.Category.Fiction, available: true },
-        { title: "Superfreakonomics", author: "Dubner, Stephen", publisher: "HarperCollins", category: Enum_1.Category.Fiction, available: true },
-        { title: "Data Scientists at Work", author: "Sebastian Gutierrez", publisher: "Apress", category: Enum_1.Category.Poetry, available: false }
+        { id: 1, title: "Fundamentals of Wavelets", author: "Goswami, Jaideva", publisher: "Wiley", category: Enum_1.Category.Biography, available: true },
+        { id: 2, title: "Data Smart", author: "Foreman, John", publisher: "Wiley", category: Enum_1.Category.Biography, available: false },
+        { id: 3, title: "God Created the Integers", author: "Hawking, Stephen", publisher: "Penguin", category: Enum_1.Category.Fiction, available: true },
+        { id: 4, title: "Superfreakonomics", author: "Dubner, Stephen", publisher: "HarperCollins", category: Enum_1.Category.Fiction, available: true },
+        { id: 5, title: "Data Scientists at Work", author: "Sebastian Gutierrez", publisher: "Apress", category: Enum_1.Category.Poetry, available: false }
     ];
     return books;
 }
+exports.GetAllBooks = GetAllBooks;
 function LogFirstAvailable(allBooks) {
     var firstAvailable = '';
     for (var _i = 0, allBooks_1 = allBooks; _i < allBooks_1.length; _i++) {
@@ -28,12 +30,7 @@ function LogFirstAvailable(allBooks) {
     console.log("Total Books:" + allBooks.length);
     console.log("Frist Available:" + firstAvailable);
 }
-var titles = getBookTitleByCategory(Enum_1.Category.Fiction);
-for (var _i = 0, titles_1 = titles; _i < titles_1.length; _i++) {
-    var title = titles_1[_i];
-    console.log(title);
-}
-function getBookTitleByCategory(category) {
+function GetBookTitleByCategory(category) {
     console.log("Getting books in category:" + Enum_1.Category[category]);
     var allBooks = GetAllBooks();
     var filterredTitle = [];
@@ -45,4 +42,5 @@ function getBookTitleByCategory(category) {
     }
     return filterredTitle;
 }
+exports.GetBookTitleByCategory = GetBookTitleByCategory;
 //# sourceMappingURL=ArrayType.js.map

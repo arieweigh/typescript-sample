@@ -6,7 +6,7 @@ enum Category {
 
 let favouriteCat: Category = Category.Biography;
 //console.log(favouriteCat);
-//console.log(Category[favouriteCat])
+//console.log(Category[favouriteCat]) 
 
 //Arrays
 let names: string[] = ["Nafly", "Chinthaka", "Marlon", "Sherin"] 

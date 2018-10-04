@@ -1,6 +1,7 @@
 import { Category } from './Enum'
 
 interface IBooks {
+    id: number;
     title: string;
     author: string;
     publisher: string;
@@ -9,6 +10,7 @@ interface IBooks {
 }
 
 class Book implements IBooks {
+    id: number;
     title: string;
     author: string;
     publisher: string;
@@ -18,11 +20,11 @@ class Book implements IBooks {
 
 function GetAllBooks(): Book[] {
     let books = [
-        { title: "Fundamentals of Wavelets", author: "Goswami, Jaideva", publisher: "Wiley", category: Category.Biography, available: true },
-        { title: "Data Smart", author: "Foreman, John", publisher: "Wiley", category: Category.Biography, available: false },
-        { title: "God Created the Integers", author: "Hawking, Stephen", publisher: "Penguin", category: Category.Fiction, available: true },
-        { title: "Superfreakonomics", author: "Dubner, Stephen", publisher: "HarperCollins", category: Category.Fiction, available: true },
-        { title: "Data Scientists at Work", author: "Sebastian Gutierrez", publisher: "Apress", category: Category.Poetry, available: false }
+        { id: 1, title: "Fundamentals of Wavelets", author: "Goswami, Jaideva", publisher: "Wiley", category: Category.Biography, available: true },
+        { id: 2, title: "Data Smart", author: "Foreman, John", publisher: "Wiley", category: Category.Biography, available: false },
+        { id: 3, title: "God Created the Integers", author: "Hawking, Stephen", publisher: "Penguin", category: Category.Fiction, available: true },
+        { id: 4, title: "Superfreakonomics", author: "Dubner, Stephen", publisher: "HarperCollins", category: Category.Fiction, available: true },
+        { id: 5,  title: "Data Scientists at Work", author: "Sebastian Gutierrez", publisher: "Apress", category: Category.Poetry, available: false }
     ];
 
     return books;
@@ -44,15 +46,16 @@ function LogFirstAvailable(allBooks: Book[]): void {
 
 //const allBooks: Book[] = GetAllBooks();
 //allBooks.push({ title: "Statistical Decision Theory", author: "Pratt, John", publisher: "MIT Press", category: Category.Poetry, available: true });
-//LogFirstAvailable(allBooks)
+//LogFirstAvailable(allBooks) 
 
-const titles = getBookTitleByCategory(Category.Fiction);
+/*
+const titles = GetBookTitleByCategory(Category.Fiction);
 for(let title of titles){
     console.log(title);
-}
+}*/
 
 
-function getBookTitleByCategory(category: Category): Array<string> {
+function GetBookTitleByCategory(category: Category): Array<string> {
     
     console.log("Getting books in category:" + Category[category]);
     
@@ -67,3 +70,5 @@ function getBookTitleByCategory(category: Category): Array<string> {
 
     return filterredTitle;
 }
+
+export {GetAllBooks, Book, GetBookTitleByCategory};
