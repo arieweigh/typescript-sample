@@ -6,4 +6,3 @@ var Category;
     Category[Category["Poetry"] = 2] = "Poetry";
     Category[Category["Fiction"] = 3] = "Fiction";
 })(Category = exports.Category || (exports.Category = {}));
-//# sourceMappingURL=Constants.js.map

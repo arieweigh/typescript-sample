@@ -6,4 +6,3 @@ var Book = (function () {
     return Book;
 }());
 exports.Book = Book;
-//# sourceMappingURL=Book.js.map

@@ -1,13 +1,15 @@
-var utility = (function () {
-    function utility() {
+var Utility = (function () {
+    function Utility() {
     }
-    utility.getInputValue = function (elementId) {
+    Utility.getInputValue = function (elementId) {
         var inputElement = (document.getElementById("txtName"));
         return inputElement.value;
     };
-    utility.logger = function (message) {
+    Utility.logger = function (message) {
         console.log(message);
     };
-    return utility;
+    Utility.Purge = function (data) {
+        return data.slice(2, data.length);
+    };
+    return Utility;
 }());
-//# sourceMappingURL=utility.js.map

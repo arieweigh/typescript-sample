@@ -1,7 +1,8 @@
-class utility {
-
+class Utility {
   public static getInputValue(elementId: string): string {
-    let inputElement: HTMLInputElement = <HTMLInputElement>(document.getElementById("txtName"));
+    let inputElement: HTMLInputElement = <HTMLInputElement>(
+      document.getElementById("txtName")
+    );
     return inputElement.value;
   }
 
@@ -9,4 +10,8 @@ class utility {
     console.log(message);
   }
 
+  public static Purge<T>(data: Array<T>): Array<T> {
+    //logic goes here
+    return data.slice(2, data.length);
+  }
 }

@@ -6,4 +6,3 @@ var Author = (function () {
     return Author;
 }());
 exports.Author = Author;
-//# sourceMappingURL=Author.js.map

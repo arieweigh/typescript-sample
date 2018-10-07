@@ -58,4 +58,3 @@ var Journal = (function (_super) {
     return Journal;
 }(ReferenceItem));
 exports.Journal = Journal;
-//# sourceMappingURL=ReferenceItem.js.map

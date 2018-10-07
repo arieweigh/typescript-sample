@@ -12,6 +12,6 @@
         "./**/*.ts"
     ],
     "exclude": [
-        "./Classes/HelloWorld.ts"
+        "./Classes/OtherSample.ts"
     ]
 }

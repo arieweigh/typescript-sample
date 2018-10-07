@@ -6,4 +6,3 @@ var Person = (function () {
     return Person;
 }());
 exports.Person = Person;
-//# sourceMappingURL=Person.js.map
